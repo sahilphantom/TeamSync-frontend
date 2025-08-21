@@ -1,0 +1,18 @@
+.channel-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.channel-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: white;
+}
+
+/* Dark mode */
+.dark .channel-loading {
+  background-color: #2d3748;
+}

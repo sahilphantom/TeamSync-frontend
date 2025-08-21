@@ -1,0 +1,18 @@
+.direct-message-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.dm-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: white;
+}
+
+/* Dark mode */
+.dark .dm-loading {
+  background-color: #2d3748;
+}

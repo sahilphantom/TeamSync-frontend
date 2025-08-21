@@ -1,0 +1,14 @@
+.workspace-sidebar {
+  width: 260px;
+  background-color: #3f0e40;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}

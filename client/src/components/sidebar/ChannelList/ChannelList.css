@@ -1,0 +1,58 @@
+.channel-list {
+  padding: 1rem;
+}
+
+.channel-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.channel-list-header h3 {
+  margin: 0;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.channel-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.channel-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #e2e8f0;
+  text-decoration: none;
+}
+
+.channel-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.channel-prefix {
+  font-weight: 700;
+  color: #718096;
+}
+
+.channel-name {
+  flex: 1;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.channel-private {
+  font-size: 0.75rem;
+  color: #718096;
+}
