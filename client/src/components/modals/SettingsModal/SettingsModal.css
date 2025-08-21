@@ -1,0 +1,131 @@
+.settings-modal {
+  padding: 0;
+}
+
+.settings-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.settings-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.settings-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.dark .settings-section h3 {
+  color: #e2e8f0;
+}
+
+.preference-item {
+  margin-bottom: 1.25rem;
+}
+
+.preference-item:last-child {
+  margin-bottom: 0;
+}
+
+.preference-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 0.25rem;
+}
+
+.preference-label input[type="checkbox"] {
+  margin-right: 0.75rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  cursor: pointer;
+}
+
+.preference-label select {
+  margin-left: auto;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  background: white;
+}
+
+.dark .preference-label select {
+  background: #2d3748;
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
+
+.preference-text {
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.dark .preference-text {
+  color: #e2e8f0;
+}
+
+.preference-description {
+  font-size: 0.875rem;
+  color: #718096;
+  margin-left: 1.85rem;
+  margin-top: 0.25rem;
+}
+
+.dark .preference-description {
+  color: #a0aec0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.dark .modal-actions {
+  border-top-color: #4a5568;
+}
+
+/* Checkbox styling */
+.preference-label input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 2px solid #cbd5e0;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.preference-label input[type="checkbox"]:checked {
+  background-color: #4299e1;
+  border-color: #4299e1;
+}
+
+.preference-label input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 0.75rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dark .preference-label input[type="checkbox"] {
+  background-color: #2d3748;
+  border-color: #4a5568;
+}
+
+.dark .preference-label input[type="checkbox"]:checked {
+  background-color: #4299e1;
+  border-color: #4299e1;
+}

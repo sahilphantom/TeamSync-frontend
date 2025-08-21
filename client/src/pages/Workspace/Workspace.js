@@ -12,7 +12,7 @@ import CreateWorkspaceModal from '../../components/modals/CreateWorkspaceModal/C
 import Loader from '../../components/common/Loader/Loader';
 import './Workspace.css';
 
-const WorkspacePage = () => {
+const Workspace = () => {
   const dispatch = useDispatch();
   const { workspaces, currentWorkspace, isLoading } = useSelector(state => state.workspaces);
   const { currentChannel } = useSelector(state => state.channels);
@@ -78,4 +78,4 @@ const WorkspacePage = () => {
   );
 };
 
-export default WorkspacePage;
+export default Workspace;

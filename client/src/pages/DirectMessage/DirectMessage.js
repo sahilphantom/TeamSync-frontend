@@ -8,7 +8,7 @@ import MessageInput from '../../components/chat/MessageInput/MessageInput';
 import Loader from '../../components/common/Loader/Loader';
 import './DirectMessage.css';
 
-const DirectMessagePage = () => {
+const DirectMessage = () => {
   const { userId } = useParams();
   const [recipient, setRecipient] = useState(null);
   const { user } = useSelector(state => state.auth);
@@ -76,4 +76,4 @@ const DirectMessagePage = () => {
   );
 };
 
-export default DirectMessagePage;
+export default DirectMessage;

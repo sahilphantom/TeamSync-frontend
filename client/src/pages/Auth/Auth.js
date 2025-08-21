@@ -6,7 +6,7 @@ import RegisterForm from '../../components/auth/RegisterForm/RegisterForm';
 import Loader from '../../components/common/Loader/Loader';
 import './Auth.css';
 
-const AuthPage = () => {
+const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
   const { isAuthenticated, isLoading } = useSelector(state => state.auth);
 
@@ -45,4 +45,4 @@ const AuthPage = () => {
   );
 };
 
-export default AuthPage;
+export default Auth;

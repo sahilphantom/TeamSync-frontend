@@ -13,9 +13,18 @@ export const updateNotificationPreferences = (preferences) => {
 };
 
 export const searchUsers = (query) => {
-  return api.get(`/users/search/users?query=${query}`);
+  return api.get(`/users/search/users?query=${encodeURIComponent(query)}`);
 };
 
 export const getOnlineUsers = (workspaceId) => {
   return api.get(`/users/workspace/${workspaceId}/online`);
+};
+
+// Add this function for file upload
+export const uploadAvatar = (formData) => {
+  return api.post('/users/avatar', formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  });
 };

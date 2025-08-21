@@ -1,0 +1,184 @@
+/* Auth Page */
+.auth-page {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-header h1 {
+  color: #2d3748;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.auth-header p {
+  color: #718096;
+  margin: 0;
+}
+
+/* Workspace Page */
+.workspace-page {
+  display: flex;
+  height: 100vh;
+  background-color: white;
+}
+
+.workspace-sidebar {
+  width: var(--sidebar-width);
+  background-color: #3f0e40;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.workspace-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+
+.welcome-message h2 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.welcome-message p {
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+/* Channel Page */
+.channel-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.channel-header {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: white;
+}
+
+/* Direct Message Page */
+.direct-message-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.dm-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: white;
+  gap: 1rem;
+}
+
+.dm-info h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #2d3748;
+}
+
+.dm-status {
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+/* Not Found Page */
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.not-found-content {
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.not-found-content h1 {
+  font-size: 8rem;
+  margin: 0;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.not-found-content h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+
+.not-found-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Dark mode styles */
+.dark .workspace-content,
+.dark .channel-header,
+.dark .dm-header {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+.dark .channel-header,
+.dark .dm-header {
+  border-bottom-color: #4a5568;
+}
+
+.dark .welcome-message h2 {
+  color: #e2e8f0;
+}
+
+.dark .welcome-message p {
+  color: #a0aec0;
+}
+
+.dark .dm-info h2 {
+  color: #e2e8f0;
+}
+
+.dark .dm-status {
+  color: #a0aec0;
+}

@@ -1,0 +1,109 @@
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dark mode support */
+.App.dark {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+/* Main layout */
+.main-container {
+  display: flex;
+  height: calc(100vh - var(--header-height));
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: #3f0e40;
+  color: white;
+  overflow-y: auto;
+}
+
+/* Content area */
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Message area */
+.message-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: white;
+}
+
+.dark .message-area {
+  background-color: #2d3748;
+}
+
+/* Input area */
+.input-area {
+  padding: 1rem;
+  border-top: 1px solid #e2e8f0;
+  background-color: white;
+}
+
+.dark .input-area {
+  background-color: #2d3748;
+  border-top-color: #4a5568;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  :root {
+    --sidebar-width: 0px;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -100%;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+  }
+
+  .sidebar.open + .mobile-overlay {
+    display: block;
+  }
+}
+
+/* Print styles */
+@media print {
+  .sidebar,
+  .input-area,
+  .btn {
+    display: none !important;
+  }
+
+  .content-area {
+    height: auto;
+    overflow: visible;
+  }
+
+  .message-area {
+    overflow: visible;
+    height: auto;
+  }
+}

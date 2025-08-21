@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { Toaster } from 'react-hot-toast';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -7,12 +7,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import store from './store/store';
 import { AuthProvider } from './hooks/useAuth';
 import { SocketProvider } from './hooks/useSocket';
-import ProtectedRoute from './components/common/ProtectedRoute';
-import AuthPage from './pages/Auth';
-import WorkspacePage from './pages/Workspace';
-import ChannelPage from './pages/Channel';
-import DirectMessagePage from './pages/DirectMessage';
-import NotFoundPage from './pages/NotFound';
+import AppRoutes from './routes';
 
 import './App.css';
 
@@ -26,26 +21,31 @@ function App() {
           <SocketProvider>
             <Router>
               <div className="App">
-                <Routes>
-                  <Route path="/auth" element={<AuthPage />} />
-                  <Route path="/" element={
-                    <ProtectedRoute>
-                      <WorkspacePage />
-                    </ProtectedRoute>
-                  } />
-                  <Route path="/channel/:channelId" element={
-                    <ProtectedRoute>
-                      <ChannelPage />
-                    </ProtectedRoute>
-                  } />
-                  <Route path="/dm/:userId" element={
-                    <ProtectedRoute>
-                      <DirectMessagePage />
-                    </ProtectedRoute>
-                  } />
-                  <Route path="*" element={<NotFoundPage />} />
-                </Routes>
-                <Toaster position="top-right" />
+                <AppRoutes />
+                <Toaster 
+                  position="top-right"
+                  toastOptions={{
+                    duration: 4000,
+                    style: {
+                      background: '#363636',
+                      color: '#fff',
+                    },
+                    success: {
+                      duration: 3000,
+                      iconTheme: {
+                        primary: '#4ade80',
+                        secondary: '#fff',
+                      },
+                    },
+                    error: {
+                      duration: 5000,
+                      iconTheme: {
+                        primary: '#f87171',
+                        secondary: '#fff',
+                      },
+                    },
+                  }}
+                />
               </div>
             </Router>
           </SocketProvider>

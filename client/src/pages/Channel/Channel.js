@@ -10,7 +10,7 @@ import MessageInput from '../../components/chat/MessageInput/MessageInput';
 import Loader from '../../components/common/Loader/Loader';
 import './Channel.css';
 
-const ChannelPage = () => {
+const Channel = () => {
   const { channelId } = useParams();
   const dispatch = useDispatch();
   const { currentChannel } = useSelector(state => state.channels);
@@ -63,4 +63,4 @@ const ChannelPage = () => {
   );
 };
 
-export default ChannelPage;
+export default Channel;
